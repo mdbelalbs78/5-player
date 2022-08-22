@@ -29,7 +29,7 @@
                         <h2 class="card-title">Lionel Messi</h2>
 
                         <div class="card-actions">
-                            <button class="btn btn-primary">SELECT</button>
+                            <button class="btn btn-primary" onclick="addPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         <h2 class="card-title">OZIL</h2>
 
                         <div class="card-actions">
-                            <button class="btn btn-primary">SELECT</button>
+                            <button class="btn btn-primary" onclick="addPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <h2 class="card-title">Neymar Jr</h2>
 
                         <div class="card-actions">
-                            <button class="btn btn-primary">SELECT</button>
+                            <button class="btn btn-primary"onclick="addPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                         <h2 class="card-title">Mbappe</h2>
 
                         <div class="card-actions">
-                            <button class="btn btn-primary">SELECT</button>
+                            <button class="btn btn-primary" onclick="addPlayer(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                         <h2 class="card-title">Sadio Mane</h2>
 
                         <div class="card-actions">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary" onclick="addPlayer(this)">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <h2 class="card-title">Mohamed Salah</h2>
                        
                         <div class="card-actions">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary" onclick="addPlayer(this)">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -110,49 +110,27 @@
             <!-- ... -->
             <div>
                 <h1 class="text-5xl text-center">Selected - V</h1>
+                <span class="text-blue-500" id="total-added-product">0</span>
                 <!-- table -->
                 <div class="overflow-x-auto">
-                    <table class="table w-50">
+                    <table class="table w-full">
                         <!-- head -->
 
-                        <tbody>
-                            <!-- row 1 -->
-                            <tr>
+                        <tbody id="carts-products">
+                          <!-- row 1 -->
+                            <!-- <tr>
                                 <th>1</th>
                                 <td>Cy Ganderton</td>
+                                
+                            </tr> -->
 
-                            </tr>
-                            <!-- row 2 -->
-                            <tr class="hover">
-                                <th>2</th>
-                                <td>Hart Hagerty</td>
-
-                            </tr>
-                            <!-- row 3 -->
-                            <tr>
-                                <th>3</th>
-                                <td>Brice Swyre</td>
-
-                            </tr>
-                            <!-- row 4 -->
-                            <tr>
-                                <th>4</th>
-                                <td>Cy Ganderton</td>
-
-                            </tr>
-                            <!-- row 5 -->
-                            <tr>
-                                <th>5</th>
-                                <td>Cy Ganderton</td>
-
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </section>
-
+     <script src="js/player.js"></script>
 </body>
 
 </html>
