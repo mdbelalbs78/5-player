@@ -150,7 +150,7 @@
                         <h2 class="card-title">Cristiano Ronaldo </h2>
 
                         <div class="card-actions">
-                            <button class="btn btn-primary" onclick="addToCart(this)">SELECT</button>
+                            <button class="btn btn-primary px-12" onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -164,34 +164,43 @@
 
                 <div>
                     <h2 class="text-5xl">Selected-V</h2>
+                    <div class="overflow-x-auto">
+                        <table class="bg-orange-400 h-60 table table-zebra w-full">
+                            <!-- head -->
+                            <thead>
+                                <!-- <tr>
+                                    
+                                    <th>Name</th>
+    
+    
+                                </tr> -->
+                            </thead>
+                            <tbody class="" id="cart-products">
+
+                                <tr>
+                                    <!-- <th>1</th>
+                                    <td>Cy Ganderton</td> -->
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <div class="overflow-x-auto">
-                    <table class="table table-zebra w-full">
-                        <!-- head -->
-                        <thead class="bg-orange-400">
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                
-                               
-                            </tr>
-                        </thead>
-                        <tbody>
 
-                        </tbody>
-                    </table>
-                </div>
 
                 <div>
                     <div class="bg-black text-yellow-400 text-center p-4 mt-10 py-3">
                         <h2 class="text-2xl">Budget</h2>
                         <div class="my-4 pb-2">
                             <label for="per-playerId">Per Player </label>
-                            <input id="per-playerId" class="px-4 py-3 rounded" type="text" placeholder="">
+                            <input id="player-field" class="px-4 py-3 rounded" type="text" placeholder="">
                         </div>
-                        <button class="btn btn-primary w-3/4">Calculate</button>
+                        <button id="calculate-btn" class="btn btn-primary w-3/4">Calculate</button>
+
                         <h4 class="py-2">Player Expenses $<span>0000</span></h4>
+                        
                         <div class="my-4 py-2">
                             <label for="manager-Id">Manager</label>
                             <input id="manager-Id" class="px-4 py-3 rounded" type="text" placeholder="">
