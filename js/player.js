@@ -49,9 +49,38 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const calculateTotal = parseFloat(calculateAmountString);
 
 
-   const calculateButton = document.getElementById('calculate-btn');
-   const calculateButtonString = calculateButton.innerText;
-   calculateButton.innerText =calculateTotal;
+   const playerSpan = document.getElementById('player-span')
+   const playerSpanString = playerSpan.innerText;
+   const playerSpanFolat = parseFloat(playerSpanString)
+   playerSpan.innerText = calculateTotal;
 
-   console.log(calculateTotal);
+    
+});
+
+document.getElementById('calculate-all').addEventListener('click',function(){
+    
+
+    const playerSpan = document.getElementById('player-span')
+    const playerSpanString = playerSpan.innerText;
+    const playerSpanFolat = parseFloat(playerSpanString)
+
+
+    const managerFieldNumber = document.getElementById('manager-Id');
+    const managerFieldString = managerFieldNumber.value;
+    const manageNumberTotal = parseFloat(managerFieldString)
+
+
+    const coachIdNumber = document.getElementById('coach-Id');
+    const coachIdNumberString = coachIdNumber.value;
+    const coachIdNumberTotal = parseFloat(coachIdNumberString);
+
+    
+    
+    const totalCalculation = playerSpanFolat + manageNumberTotal + coachIdNumberTotal ;
+
+    const calculateTotalElement = document.getElementById('calcualte-total');
+    calculateTotalElement.innerText = totalCalculation;
+ 
+
 })
+
