@@ -1,15 +1,19 @@
 const cartArray = [];
 
-function display(cartProduct) {
-    console.log(cartProduct);
+function display (playerProduct) {
+
+
 
     const tableBody = document.getElementById('cart-products');
-    if (cartProduct.length >= 6) {
+    if (playerProduct.length >= 6) {
         alert('you are not eqal')
         return;
+
     }
+
+
     tableBody.innerHTML = '';
-    for (let i = 0; i < cartProduct.length; i++) {
+    for (let i = 0; i < playerProduct.length; i++) {
         // console.log(cartArray[i].productName,);
         const name = cartArray[i].productName;
         const tr = document.createElement('tr');
@@ -35,6 +39,9 @@ function addToCart(element) {
     console.log(cartArray.length);
 
     display(cartArray);
+
+    element.disabled = true;
+    element.style.backgroundcolor = 'gray';
 }
 
 
@@ -49,16 +56,16 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const calculateTotal = parseFloat(calculateAmountString);
 
 
-   const playerSpan = document.getElementById('player-span')
-   const playerSpanString = playerSpan.innerText;
-   const playerSpanFolat = parseFloat(playerSpanString)
-   playerSpan.innerText = calculateTotal;
+    const playerSpan = document.getElementById('player-span')
+    const playerSpanString = playerSpan.innerText;
+    const playerSpanFolat = parseFloat(playerSpanString)
+    playerSpan.innerText = calculateTotal;
 
-    
+
 });
 
-document.getElementById('calculate-all').addEventListener('click',function(){
-    
+document.getElementById('calculate-all').addEventListener('click', function () {
+
 
     const playerSpan = document.getElementById('player-span')
     const playerSpanString = playerSpan.innerText;
@@ -74,13 +81,13 @@ document.getElementById('calculate-all').addEventListener('click',function(){
     const coachIdNumberString = coachIdNumber.value;
     const coachIdNumberTotal = parseFloat(coachIdNumberString);
 
-    
-    
-    const totalCalculation = playerSpanFolat + manageNumberTotal + coachIdNumberTotal ;
+
+
+    const totalCalculation = playerSpanFolat + manageNumberTotal + coachIdNumberTotal;
 
     const calculateTotalElement = document.getElementById('calcualte-total');
     calculateTotalElement.innerText = totalCalculation;
- 
+
 
 })
 
