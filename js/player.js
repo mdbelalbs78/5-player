@@ -1,6 +1,6 @@
 const cartArray = [];
 
-function display (playerProduct) {
+function display(playerProduct) {
 
 
 
@@ -50,16 +50,17 @@ function addToCart(element) {
 
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
+    const perPlayer = document.getElementById('cart-products');
+    const playerList = perPlayer.children.length;
 
     const calculateField = document.getElementById('player-field');
     const calculateAmountString = calculateField.value;
     const calculateTotal = parseFloat(calculateAmountString);
 
+    const totalExpenses = playerList * calculateTotal;
 
-    const playerSpan = document.getElementById('player-span')
-    const playerSpanString = playerSpan.innerText;
-    const playerSpanFolat = parseFloat(playerSpanString)
-    playerSpan.innerText = calculateTotal;
+    const playerSpan = document.getElementById('player-span');
+    playerSpan.innerText = totalExpenses;
 
 
 });
@@ -90,4 +91,3 @@ document.getElementById('calculate-all').addEventListener('click', function () {
 
 
 })
-
